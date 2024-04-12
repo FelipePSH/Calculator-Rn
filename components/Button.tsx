@@ -10,7 +10,7 @@ interface Props {
 export default function GenericRoundedButton({character, bgColor, onPress}: Props) {
     const styles = StyleSheet.create({
         button: {
-            backgroundColor: bgColor,
+            backgroundColor: bgColor,   
             paddingVertical: 12,
             paddingHorizontal: 20,
             borderRadius: 8,
@@ -23,7 +23,13 @@ export default function GenericRoundedButton({character, bgColor, onPress}: Prop
             textAlign: 'center',
             fontSize: 25,
             fontWeight: 'bold',
-        }
+        },
+        title: {
+          color: 'white',
+          textAlign: 'center',
+          fontSize: 25,
+          fontWeight: 'bold',
+      }
       });
 
   return (
