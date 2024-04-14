@@ -1,4 +1,3 @@
-import React from 'react'
 import { View, TouchableOpacity, StyleSheet, Text} from 'react-native'
 
 interface Props {
@@ -7,36 +6,35 @@ interface Props {
     onPress: () => void
   }
 
-export default function GenericRoundedButton({character, bgColor, onPress}: Props) {
+export default function KeyboardButton({character, bgColor, onPress}: Props) {
     const styles = StyleSheet.create({
         button: {
-            backgroundColor: bgColor,   
-            paddingVertical: 12,
-            paddingHorizontal: 20,
-            borderRadius: 8,
-            alignItems: 'center',
+            flex:2,
             justifyContent: 'center',
-            marginVertical: 10, 
+            alignItems: 'center',
+            backgroundColor: bgColor,
+            minHeight: 82,
+            minWidth:  130,
+            borderStyle: 'solid',
+            borderColor: 'white',
+            borderWidth: 0.2,
+
         },
         text: {
             color: 'white',
             textAlign: 'center',
-            fontSize: 25,
+            fontSize: 20,
             fontWeight: 'bold',
-        },
-        title: {
-          color: 'white',
-          textAlign: 'center',
-          fontSize: 25,
-          fontWeight: 'bold',
-      }
+        }
       });
 
   return (
+    <View>
       <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.text}>
             {character}
         </Text>
       </TouchableOpacity>
+    </View>
   )
 }

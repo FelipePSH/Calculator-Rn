@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import ButtonGroupNumber from './components/ButtonGroupNumber'
+import Keyboard from './components/Keyboard'
+import Display from './components/Display';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="auto" />
-
-      <ButtonGroupNumber/>
+      <Display />
+      <Keyboard/>
     </SafeAreaView>
   );
 }
@@ -15,8 +15,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
