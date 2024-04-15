@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, Text } from 'react-native'
+import {horizontalScale, moderateScale, verticalScale} from '../utils/Metrics'
 
 export default function Display() {
 
@@ -14,14 +15,13 @@ export default function Display() {
 
 const styles = StyleSheet.create({
   result: {
+    flex: 2,
     justifyContent: "flex-end",
     alignItems: 'flex-end',
     width: '100%',
-    height: 300,
     backgroundColor: '#F5F5F5'
   },
   textResult: {
-    fontSize: 20,
-    margin: 10
+    fontSize: moderateScale(20),  
   }
 });

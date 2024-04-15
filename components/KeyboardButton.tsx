@@ -1,29 +1,29 @@
 import { View, TouchableOpacity, StyleSheet, Text} from 'react-native'
+import {horizontalScale, moderateScale, verticalScale} from '../utils/Metrics'
 
 interface Props {
     character: string,
     bgColor: string,
-    onPress: () => void
+    textColor: string,
+    onPress: () => void,
   }
 
-export default function KeyboardButton({character, bgColor, onPress}: Props) {
+export default function KeyboardButton({character, bgColor, textColor="#383b40", onPress}: Props) {
     const styles = StyleSheet.create({
         button: {
-            flex:2,
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: bgColor,
-            minHeight: 82,
-            minWidth:  130,
-            borderStyle: 'solid',
-            borderColor: 'white',
-            borderWidth: 0.2,
-
+            minHeight: verticalScale(70),
+            minWidth:  horizontalScale(70),
+            marginHorizontal: horizontalScale(1),
+            marginVertical: verticalScale(3),
+            borderRadius: 15
         },
         text: {
-            color: 'white',
+            color: textColor,
             textAlign: 'center',
-            fontSize: 20,
+            fontSize: moderateScale(20),
             fontWeight: 'bold',
         }
       });
